@@ -6,7 +6,6 @@ function solution(age) {
     const year = 2022;
 
     return year - age + 1;
-
 }
 
 console.log(solution(40)); //1983

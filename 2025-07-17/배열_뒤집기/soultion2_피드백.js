@@ -4,15 +4,17 @@
 // num_list의 원소의 순서를 거꾸로 뒤집은 배열을 return하도록 solution 함수를 완성해주세요.
 
 function solution(num_list) {
-    const answer = [];
+    let a = '';
 
     for (let i = 0; i < num_list.length; i++) {
         const j = num_list.length - i - 1;
 
-        answer.push(num_list[j]);
+        a += num_list[j]; // 타입이 스트링
+        // console.log(typeof a);
 
     }
-    
+    const answer = [...a]; // 스트링을 배열로 푸시
+
     return answer;
 }
 

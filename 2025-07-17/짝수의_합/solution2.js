@@ -8,8 +8,7 @@ function solution(n) {
     for (let i = 0; i <= (n / 2); i++) {
         //console.log('기존값', answer);
         answer += i * 2;
-        // console.log('새로운값', answer);
-
+        console.log('새로운값', i, i * 2, answer);
     }
 
     return answer;
