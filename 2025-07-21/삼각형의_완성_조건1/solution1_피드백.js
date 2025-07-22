@@ -6,24 +6,32 @@
 // 세 변으로 삼각형을 만들 수 있다면 1, 만들 수 없다면 2를 return하도록 solution 함수를 완성해주세요.
 
 function solution(sides) {
-    let answer = 0;
-    let max = 0;
+    let sum = 0;
+    let arr = [];
 
-    max = Math.max(...sides);
-    // console.log(max);
-
-
-    for (let i = 0; i <sides.length; i++) {
-        if(sides[i] !== max) {
-            answer += sides[i];
+    let max = sides[0];
+    for (let i = 1; i <sides.length; i++) {
+        if(max < sides[i]) {
+            max = sides[i]
         }
     }
+    console.log('max', max);
 
-    if(max < answer) {
-        return 1;
+    arr = sides.filter((x) => x !== max)
+    // console.log(arr);
+
+    for (let j = 0; j < arr.length; j++) {
+        sum += arr[j];
+
     }
 
-    return 2;
+    // console.log(sum);
+
+    if(max < sum) {
+        return  1
+    }
+
+    return  2;
 
 }
 

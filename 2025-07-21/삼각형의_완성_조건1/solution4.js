@@ -12,7 +12,7 @@ function solution(sides) {
     max = Math.max(...sides);
     // console.log(max);
 
-
+    // TODO filter, sum 사용해보기
     for (let i = 0; i <sides.length; i++) {
         if(sides[i] !== max) {
             answer += sides[i];
