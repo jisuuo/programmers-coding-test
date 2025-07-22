@@ -7,10 +7,18 @@ function solution(n) {
 
     // TODO 숫자를 문자로, 문자를 숫자로 변환할 때 String, Number를 사용하지 말고
     // 아스키 코드 사용!
-    const a = n.toString().split("");
-    for (let i = 0; i < a.length; i++) {
-        answer += Number(a[i]);
-    }
+
+    // 문자 => 숫자 charCodeAt();
+    // 숫자 => 문자
+    // const a = n.toString().split("");
+    // for (let i = 0; i < a.length; i++) {
+    //     answer += Number(a[i]);
+    // }
+
+    console.log(typeof n);
+    // const asci = n.fromCharCode();
+    // console.log(asci);
+
 
     return answer;
 }

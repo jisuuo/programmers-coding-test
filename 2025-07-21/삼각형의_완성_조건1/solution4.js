@@ -13,17 +13,21 @@ function solution(sides) {
     // console.log(max);
 
     // TODO filter, sum 사용해보기
-    for (let i = 0; i <sides.length; i++) {
-        if(sides[i] !== max) {
-            answer += sides[i];
-        }
-    }
+    // for (let i = 0; i <sides.length; i++) {
+    //     if(sides[i] !== max) {
+    //         answer += sides[i];
+    //     }
+    // }
+    //
 
-    if(max < answer) {
-        return 1;
-    }
+    const sum = sides.filter(x => x !== max).reduce((a,b) => a + b, 0);
+    // if(x !== max) {
+    //     console.log(sides.reduce((a, b) => a + b, 0));
+    // }
+    // console.log(sum);
 
-    return 2;
+    //
+    return max < sum ? 1 : 2;
 
 }
 
