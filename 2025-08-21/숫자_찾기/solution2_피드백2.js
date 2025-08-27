@@ -6,7 +6,7 @@
 function solution(num, k) {
     let answer = num.toString().indexOf(k);
     // console.log(answer);
-    return answer === -1 ? -1 : answer += 1;
+    return answer === -1 ? -1 : answer + 1;
 }
 
 // console.log(solution(29183, 1));	 // 3
@@ -15,5 +15,6 @@ function solution(num, k) {
 
 let a = 10;
 
-console.log(a + 1);
-console.log(a += 1);
+// console.log(a + 1);
+// console.log(a += 1);
+// console.log(a + a++ - --a);
